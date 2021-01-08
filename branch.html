@@ -30,8 +30,27 @@
    </head>
    <body>
       <script>
+         var c = 0;
          function ShowForm(){
-            document.getElementById("newBranchForm").style.display = 'block';
+  
+         if (c == 0){
+
+            
+            let obj = document.getElementById("newBranchForm");
+            obj.style.display = 'block';
+            let btn = document.getElementById("createFormButton");
+            btn.innerText = "Hide Form";
+            c += 1;
+         }
+         else{
+            let obj = document.getElementById("newBranchForm");
+            obj.style.display = 'none';
+            let btn = document.getElementById("createFormButton");
+            btn.innerText = "+ add new branch";
+            c = 0;
+            
+         }
+
          }
        </script>
       <!--================================-->
@@ -709,7 +728,7 @@
                      <div class="col-lg-3"></div>
                      <div class="col-lg-3"></div>
                      <div class="col-lg-3"></div>
-                     <div class="col-lg-3"><button style="float:right;" type="button" onclick="ShowForm()" class="btn btn-outline-primary rounded-pill mg-t-5">+ add new branch</button>
+                     <div class="col-lg-3"><button style="float:right;" id="createFormButton" type="button" onclick="ShowForm()" class="btn btn-outline-primary rounded-pill mg-t-5">+ add new branch</button>
                      </div>
                   </div>
                   <br>
