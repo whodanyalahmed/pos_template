@@ -15,6 +15,7 @@
       <link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
       <!-- Favicon -->	
       <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+      <script src="assets/plugins/jquery/jquery.min.js"></script>
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn"t work if you view the page via file:// -->
       <!--[if lt IE 9]>
@@ -30,21 +31,31 @@
    </head>
    <body>
       <script>
+         $(document).ready(function(){
+
+         $('#createFormButton').click(function(){
+         $('#newBranchForm').toggle('slow');
+
+         });
+
+         });
+
+
          var c = 0;
          function ShowForm(){
   
          if (c == 0){
 
             
-            let obj = document.getElementById("newBranchForm");
-            obj.style.display = 'block';
+            // let obj = document.getElementById("newBranchForm");
+            // obj.style.display = 'block';
             let btn = document.getElementById("createFormButton");
             btn.innerText = "Hide Form";
             c += 1;
          }
          else{
-            let obj = document.getElementById("newBranchForm");
-            obj.style.display = 'none';
+            // let obj = document.getElementById("newBranchForm");
+            // obj.style.display = 'none';
             let btn = document.getElementById("createFormButton");
             btn.innerText = "+ add new branch";
             c = 0;
@@ -1456,7 +1467,9 @@
       <!--================================-->
       <!-- Footer Script -->
       <!--================================-->
-      <script src="assets/plugins/jquery/jquery.min.js"></script>
+      
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+      
       <script src="assets/plugins/jquery-ui/jquery-ui.js"></script>
       <script src="assets/plugins/popper/popper.js"></script>
       <script src="assets/plugins/feather/feather.min.js"></script>
