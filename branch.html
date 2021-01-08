@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
    
 <head>
       <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -21,9 +21,19 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
+      <style>
+      #newBranchForm{
+         display: none;
+      }
+      </style>
+
    </head>
    <body>
-
+      <script>
+         function ShowForm(){
+            document.getElementById("newBranchForm").style.display = 'block';
+         }
+       </script>
       <!--================================-->
       <!-- Page Container Start -->
       <!--================================-->
@@ -695,14 +705,22 @@
                   </div>
                   <!--/ Breadcrumb End -->
                   <!--================================-->
+                  <div class="row">
+                     <div class="col-lg-3"></div>
+                     <div class="col-lg-3"></div>
+                     <div class="col-lg-3"></div>
+                     <div class="col-lg-3"><button style="float:right;" type="button" onclick="ShowForm()" class="btn btn-outline-primary rounded-pill mg-t-5">+ add new branch</button>
+                     </div>
+                  </div>
+                  <br>
                   <!-- Form Layout Start -->
                   <!--================================-->				  
 
-                  <div class="row clearfix">
+                  <div  class="row clearfix">
                      <!--================================-->
                      <!-- Top Label Layout Start -->
                      <!--================================-->
-                     <div class="col-md-12 col-lg-12">
+                     <div id="newBranchForm" class="col-md-12 col-lg-12">
                         <div class="card mg-b-30">
                            <div class="card-header">
                               <div class="d-flex justify-content-between align-items-center">
